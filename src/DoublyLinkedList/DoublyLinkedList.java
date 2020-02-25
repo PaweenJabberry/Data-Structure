@@ -9,6 +9,14 @@ public class DoublyLinkedList {
         return this.count;
     }
 
+    public NodeBackwards getFirst() {
+        return this.first;
+    }
+
+    public NodeBackwards getLast() {
+        return this.last;
+    }
+
     // add first
     public void addFirst(NodeBackwards newNode) {
 
@@ -162,9 +170,13 @@ public class DoublyLinkedList {
         }
         NodeBackwards currentNode = first;
         for(int i=0;i<count;i++) {
-            System.out.println(currentNode.getValue());
+            System.out.print(currentNode.getValue());
+            if (i<count-1) {
+                System.out.print("<-->");
+            }
             currentNode = currentNode.getNextNode();
         }
+        System.out.println();
 
         return true;
     }
